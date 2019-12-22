@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`SnapShot Matchers customize snapshot snapshot without classname and spaces: toMatchTrimmedSnapshot 1`] = `
+<div>
+  dummy content
+</div>
+`;
+
 exports[`SnapShot Matchers property matcher 1`] = `
 Object {
   "createdAt": Any<Date>,
