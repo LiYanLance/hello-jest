@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SnapShot Matchers property matcher 1`] = `
+Object {
+  "createdAt": Any<Date>,
+  "id": Any<Number>,
+  "name": "Li Yan",
+}
+`;
+
+exports[`SnapShot Matchers snapshot 1`] = `
+<div
+  className="some class"
+>
+  dummy content
+</div>
+`;
