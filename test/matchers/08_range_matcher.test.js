@@ -1,21 +1,4 @@
 describe("Own Matchers", () => {
-  expect.extend({
-    toBeWithinRange(received, floor, ceiling) {
-      const pass = received >= floor && received <= ceiling
-      if (pass) {
-        return {
-          pass: true,
-          message: () => `expected ${received} not to be within range ${floor} - ${ceiling}`
-        }
-      } else {
-        return {
-          pass: false,
-          message: () => `expected ${received} to be within range ${floor} - ${ceiling}`
-        }
-      }
-    }
-  })
-  
   it("match Range", () => {
     expect(4).toBeWithinRange(3, 5)
     expect(4).toBeWithinRange(4, 5)
@@ -27,3 +10,5 @@ describe("Own Matchers", () => {
     })
   })
 })
+
+//https://github.com/jest-community/jest-extended
