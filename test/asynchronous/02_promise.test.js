@@ -25,17 +25,19 @@ describe("promise", () => {
 })
 
 describe("async await", () => {
-  it("await", async () => {
+  
+  const fetchData = () => Promise.resolve("aaa")
+  
+  it("await then", async () => {
     expect.hasAssertions()
     
-    await Promise.resolve("aaa").then((value) => {
-      expect(value).toEqual("aaa")
-    })
+    const value = await fetchData()
+    expect(value).toEqual("aaa")
   })
   
-  it("await", async () => {
+  it("await resolves", async () => {
     expect.hasAssertions()
     
-    await expect(Promise.resolve("aaa")).resolves.toEqual("aaa")
+    await expect(fetchData()).resolves.toEqual("aaa")
   })
 })

@@ -53,6 +53,8 @@ describe("recursive timer", () => {
   
   beforeEach(() => {
     jest.useFakeTimers()
+    jest.clearAllTimers()
+    jest.clearAllMocks()
   })
   
   it("schedules a 10-second timer after 1 second", () => {
