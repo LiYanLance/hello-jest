@@ -69,4 +69,8 @@ timer 函数: setTimeout, setInterval, clearTimeout, clearInterval
 ## Mock
 当使用 babel-jest 时, jest.mock() 会被自动 hoisting. 可以使用 jest.doMock() 避免这种提升.
 
+mockClear: 清空 mockFn.mock.calls 和 mockFn.mock.instances
+mockReset: 同上, 且清空 mock return value 和 mock implementation
+mockRestore: 同上, 且恢复原始（非 mock）implementation
+
 ## Setup/Teardown
