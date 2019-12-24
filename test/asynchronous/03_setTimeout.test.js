@@ -8,6 +8,10 @@ describe("fake timer", () => {
     }, 1000);
   }
   
+  beforeAll(() => {
+    console.log = jest.fn()
+  })
+  
   beforeEach(() => {
     jest.useFakeTimers()
   })
@@ -36,6 +40,10 @@ describe("fake timer", () => {
 })
 
 describe("recursive timer", () => {
+  
+  beforeAll(() => {
+    console.log = jest.fn()
+  })
   
   function infiniteTimerGame(callback) {
     console.log('游戏开始');
