@@ -41,7 +41,7 @@ snapshot-diff: 适用于测试不同 React 组件状态之间的差异. `expect(
 ```js
 exports[`<UserName /> should handle some test case`] = `null`
 
-exports[`<UserName /> should render null`] = `null`;
+exports[`<UserName /> should render null`] = `null`
 ```
 后一个可读性更好
 
@@ -67,5 +67,6 @@ timer 函数: setTimeout, setInterval, clearTimeout, clearInterval
 如果在此期间还创建了新的 timer, 且 timer 的执行时间先于 ms, 那新创建的 timer 也会被执行
 
 ## Mock
+当使用 babel-jest 时, jest.mock() 会被自动 hoisting. 可以使用 jest.doMock() 避免这种提升.
 
 ## Setup/Teardown
