@@ -12,6 +12,7 @@ describe("node build in modules", () => {
   
   beforeEach(() => {
     fs.__setMockFiles(MOCK_FILE_INFO)
+    console.log = jest.fn()
   })
   
   it("count files", () => {
