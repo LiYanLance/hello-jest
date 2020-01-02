@@ -64,5 +64,12 @@ describe("Mock fn API", () => {
   
       spy.mockRestore()
     })
+
+    it("spyOn with mock implementation", () => {
+      const spy = jest.spyOn(video, "play").mockReturnValue(false)
+      const isPlaying = video.play()
+
+      expect(isPlaying).toBe(false)
+    })
   })
 })
