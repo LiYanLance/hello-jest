@@ -75,4 +75,17 @@ timer 函数: setTimeout, setInterval, clearTimeout, clearInterval
 - mockReset: 同上, 且清空 mock return value 和 mock implementation
 - mockRestore: 同上, 且恢复原始（非 mock）implementation, 只能用于 SpyOn
 
-## Setup/Teardown
+### bypassing
+
+运行 mock_modules/09_bypassing.spec.js 会抛出错误：TypeError：response.text is not a function
+这是因为 node-fetch 中的 Response 已经被 jest.mock 给 mock 了. 可以用 requireActual 引入真实的 Response 解决
+
+```js
+const { Response } = jest.requireActual("node-fetch")
+```
+
+## Trouble Shooting
+Docker 或 CI 服务器中执行 Jest 测试极慢. try:
+jest --runInBand
+jest --maxWorkers=4
+
