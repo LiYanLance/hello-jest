@@ -85,7 +85,7 @@ const { Response } = jest.requireActual("node-fetch")
 ```
 
 ## Trouble Shooting
-Docker 或 CI 服务器中执行 Jest 测试极慢. try:
-jest --runInBand
-jest --maxWorkers=4
+Docker 或 CI 服务器中执行 Jest 测试极慢. try:  
+`jest --runInBand`  
+`jest --maxWorkers=4`
 
