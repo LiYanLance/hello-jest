@@ -3,5 +3,6 @@ module.exports = {
   transform: {
     "^.+\\.jsx?$": "babel-jest"
   },
-  roots: ["<rootDir>/test/"]
+  roots: ["<rootDir>/test/"],
+  snapshotSerializers: ["enzyme-to-json/serializer"]
 }
