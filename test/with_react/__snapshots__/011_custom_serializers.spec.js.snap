@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`custom serializer custom snapshot: Link component 1`] = `
+<a
+  className=normal,
+  href=http://www.facebook.com,
+  onMouseEnter=[[Function]],
+  onMouseLeave=[[Function]]
+>
+  Facebook
+</a>
+
+`;
