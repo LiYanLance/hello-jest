@@ -1,10 +1,38 @@
 # Jest
 
+## Arch
+
+- Jest run command - cli
+- Config
+  - Global config
+  - Project config  1...N (server: node, client: js-dom)
+- File watch
+  - watchman(faster)/node
+  - watch mode
+- Jest worker
+  - build up context (Files, Global config, Project config)
+  - get dependencies
+
+- Search Source - find tests to run in array
+- Test Sequencer - test priority
+  - run failed tests first
+  - run slow test first on one core
+  - using cache / count on lines, number of test case
+- Test scheduler
+  - processors / runInBand
+  - create Reporter
+- Test Runner
+  - jest-worker jasmine/APIs
+  - jest-runtime require real module or mocked, TS/babel
+
+
 特点
-- Out of box
+- Out of box - zero config
 - Snapshot
 - Great API
+- Isolated - parallelize in own processes
 - Code Coverage
+- Easy mocking
 
 ## Matchers
 
