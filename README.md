@@ -84,6 +84,32 @@ timer 函数: setTimeout, setInterval, clearTimeout, clearInterval
 const { Response } = jest.requireActual("node-fetch")
 ```
 
+## Config
+
+如果有一些 test utils 需要几乎在每个测试中都引用, 可以把这个文件所在文件夹配置到 moduleDirectories, 像使用 modules 一样引用
+```js
+// import { render, fireEvent } from "../../../../test-utils"
+import { render, fireEvent } from "test-utils"
+```
+假设 test-utils 文件所在的文件夹是 utils, 配置如下, 在运行测试时, jest 会一层层向上找该文件夹.
+```json
+{
+  "moduleDirectories": [ "node_modules", "utils"]
+}
+```
+
+如果使用 TS, 在 tsconfig.js 中
+```json
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "test-utils": ["../utils/test-utils"]
+    }
+  }
+}
+```
+
 ## Trouble Shooting
 Docker 或 CI 服务器中执行 Jest 测试极慢. try:  
 `jest --runInBand`  
