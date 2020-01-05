@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SnapShot Matchers customize snapshot snapshot without classname and spaces: toMatchTrimmedSnapshot 1`] = `
+exports[`SnapShot Matchers customize snapshot snapshot without classname and spaces: toMatchNonClassSnapshot 1`] = `
 <div>
   dummy content
 </div>

@@ -52,9 +52,9 @@ describe("SnapShot Matchers", () => {
     const { toMatchSnapshot } = require("jest-snapshot")
     
     expect.extend({
-      toMatchTrimmedSnapshot(received) {
+      toMatchNonClassSnapshot(received) {
         delete received.props.className
-        return toMatchSnapshot.call(this, received, 'toMatchTrimmedSnapshot')
+        return toMatchSnapshot.call(this, received, 'toMatchNonClassSnapshot')
       }
     })
     
@@ -67,7 +67,7 @@ describe("SnapShot Matchers", () => {
       .create(<SomeComponent content="dummy content" />)
       .toJSON();
 
-      expect(tree).toMatchTrimmedSnapshot()
+      expect(tree).toMatchNonClassSnapshot()
     })
   })
 });
